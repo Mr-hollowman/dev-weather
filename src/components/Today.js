@@ -1,15 +1,7 @@
 import React from 'react'
 import CloudBack from '../assets/images/cloud-background.png';
 import Clear from '../assets/images/Clear.png'
-export default function Today({ data, getTodayDate }) {
-    const getImage = (type) => {
-        switch (type) {
-            case "Clear":
-                return Clear
-            default:
-                break;
-        }
-    }
+export default function Today({ data, getTodayDate, getImage }) {
 
     return (
         <div className='today-card'>

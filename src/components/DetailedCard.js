@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function DetailedCard({data, getTodayDate}) {
+export default function DetailedCard({data, getTodayDate, getImage}) {
   return (
     <div className='det-card'>
       <div className='fiveDay-con center-container'>

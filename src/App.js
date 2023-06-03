@@ -48,10 +48,19 @@ export default function App() {
     console.log('month[dt.getMonth()]',dt.getDay())
     return `${month[dt.getMonth()]}, ${dt.getDate()} ${day[dt.getDay()]}`
   }
+
+  const getImage = (type) => {
+    switch (type) {
+        case "Clear":
+            return Clear
+        default:
+            break;
+    }
+}
   return (
     <div className='app'>
-      {todayData && <Today data={todayData} getTodayDate={getTodayDate} />}
-      {fiveDaysData && <DetailedCard data={fiveDaysData} getTodayDate={getTodayDate} />}
+      {todayData && <Today data={todayData} getTodayDate={getTodayDate} getImage={getImage} />}
+      {fiveDaysData && <DetailedCard data={fiveDaysData} getTodayDate={getTodayDate} getImage={getImage} />}
     </div>
   )
 }
