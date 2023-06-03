@@ -32,9 +32,18 @@ img{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 10%;
+    margin-top: 15%;
     font-size: 48px;
 }
 .font-col{
     color:  #E7E7EB; 
+}
+.desc{
+    margin-top: 15%;
+}
+.today-date{
+    color: #88869D;
+    display: flex;
+    gap: 10px;
+    margin-top: 15%;
 }
