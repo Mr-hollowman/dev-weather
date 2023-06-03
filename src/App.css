@@ -94,3 +94,26 @@ img{
 .min-col{
     color: #A09FB1;
 }
+.high-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.high-card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 70px 20px 70px;
+    align-items: center;
+    background-color: #1E213A;
+    
+}
+.big-fnt{
+    font-size: 56px;
+}
+.loc-icon{
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: rotate(-150deg);
+    border-radius: 50%;
+}

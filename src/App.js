@@ -24,7 +24,7 @@ export default function App() {
       deg: Math.round(data.list[0].main.temp),
       pressure: data.list[0].main.pressure,
       humidity: data.list[0].main.humidity,
-      windSpeed: data.list[0].wind.speed,
+      windSpeed: Math.round(data.list[0].wind.speed),
     }
     setTodayData(today)
     var forecast = []
@@ -39,7 +39,7 @@ export default function App() {
         minDeg:Math.round(data.list[i].main.temp_min),
         pressure: data.list[i].main.pressure,
         humidity: data.list[i].main.humidity,
-        windSpeed: data.list[i].wind.speed,
+        windSpeed: Math.round(data.list[i].wind.speed),
       }
       forecast.push(days)
     }
@@ -64,7 +64,7 @@ export default function App() {
   return (
     <div className='app'>
       {todayData && <Today data={todayData} getTodayDate={getTodayDate} getImage={getImage} />}
-      {fiveDaysData && <DetailedCard data={fiveDaysData} getTodayDate={getTodayDate} getImage={getImage} />}
+      {fiveDaysData && <DetailedCard todayData={todayData} data={fiveDaysData} getTodayDate={getTodayDate} getImage={getImage} />}
     </div>
   )
 }
