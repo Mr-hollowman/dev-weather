@@ -26,11 +26,11 @@ export default function App() {
     }
     setTodayData(today)
     var forecast = []
-    for (var i = 8; i < 40; i+=7) {
+    for (var i = 8; i < 40; i += 7) {
       var days = {
         city: data.city.name,
         date: data.list[i].dt,
-        date2: data.list[i].dt_txt,
+        date2: new Date(data.list[i].dt_txt),
         desc: data.list[i].weather[0].main,
         deg: data.list[i].main.temp,
         pressure: data.list[i].main.pressure,
@@ -41,10 +41,17 @@ export default function App() {
     }
     setFiveDaysData(forecast)
   }
+  console.log(fiveDaysData);
+  const getTodayDate = (dt) => {
+    const month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat",]
+    console.log('month[dt.getMonth()]',dt.getDay())
+    return `${month[dt.getMonth()]}, ${dt.getDate()} ${day[dt.getDay()]}`
+  }
   return (
     <div className='app'>
-      {todayData && <Today data={todayData} />}
-      {todayData && <DetailedCard />}
+      {todayData && <Today data={todayData} getTodayDate={getTodayDate} />}
+      {fiveDaysData && <DetailedCard data={fiveDaysData} getTodayDate={getTodayDate} />}
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import CloudBack from '../assets/images/cloud-background.png';
 import Clear from '../assets/images/Clear.png'
-export default function Today({ data }) {
+export default function Today({ data, getTodayDate }) {
     const getImage = (type) => {
         switch (type) {
             case "Clear":
@@ -9,14 +9,6 @@ export default function Today({ data }) {
             default:
                 break;
         }
-    }
-    console.log(data);
-
-    const getTodayDate = (dt) => {
-        const month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-        const day = ["Sun", "Mon", "Tue", "Thu", "Fri", "Sat"]
-        console.log('month[dt.getMonth()]', month[dt.getMonth()])
-        return `${month[dt.getMonth()]}, ${dt.getDay()} ${day[dt.getDay()]}`
     }
 
     return (
@@ -33,7 +25,7 @@ export default function Today({ data }) {
                 <span className='today-date'><span>Today</span> <span>&#183;</span><span>{getTodayDate(data.date2)}</span></span>
             </div>
             <span className='center-container today-date'>
-                <span class="material-icons material-symbols-outlined">
+                <span className="material-icons material-symbols-outlined">
                     location_on
                 </span>
                 <span>{data.city}</span>
