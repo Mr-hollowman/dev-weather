@@ -1,6 +1,5 @@
 import React from 'react'
 import CloudBack from '../assets/images/cloud-background.png';
-import Clear from '../assets/images/Clear.png'
 export default function Today({ data, getTodayDate, getImage }) {
 
     return (
