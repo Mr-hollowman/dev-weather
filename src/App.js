@@ -14,7 +14,6 @@ export default function App() {
     // axios("https://api.openweathermap.org/data/2.5/forecast?q=London,uk&APPID=7342a97aecf05c166038b4340067c653&units=metric").then((res) => setData(res.data))
     getTodayData()
   }, [])
-  // console.log('data', data)  
   const getTodayData = () => {
     var today = {
       city: data.city.name,
