@@ -1,9 +1,17 @@
+.app{
+    display: flex;
+}
 .today-card{
     height: 100vh;
     width: 25%;
     background-color: #1E213A;
     display: flex;
     flex-direction: column;
+}
+.det-card{
+    width: 75%;
+    height: 100vh;
+    background-color:  #100E1D;;
 }
 .cloud-back{
     opacity: 10%;
