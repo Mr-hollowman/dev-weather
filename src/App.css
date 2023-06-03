@@ -1,14 +1,40 @@
 .today-card{
     height: 100vh;
-    width: 30%;
+    width: 25%;
     background-color: #1E213A;
     display: flex;
     flex-direction: column;
+}
+.cloud-back{
+    opacity: 10%;
 }
 img{
     width: 100%;
     height: 100%;
 }
-.cloud-back{
-    opacity: 10%;
+.icon-container{
+    position: relative;
+    width: 100%;
+}
+.weather-con{
+    width: 40%;
+    height: 50%;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+}
+.center-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.temp{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10%;
+    font-size: 48px;
+}
+.font-col{
+    color:  #E7E7EB; 
 }
